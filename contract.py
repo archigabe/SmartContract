@@ -73,9 +73,6 @@ if tx_receipt is None:
   print (" {'status': 'failed', 'error': 'timeout'} ")
 #diagnostics
 #print (tx_receipt)
-#====================================================================
-
-#13: Check the contract address before calling the greet function, and construct the instance with the correct address:
 
 print("Contract address is:",tx_receipt.contractAddress)
 
@@ -87,12 +84,6 @@ greeter = W3.eth.contract(
 
 print("Output from greet()")
 print(greeter.functions.greet().call())
-
-#***Set the contract address if you have deployed through Remix/MetaMask
-
-#14*:Adjust the transaction / raw transaction code as follows:
-
-#===============================================================
 
 nonce = W3.eth.getTransactionCount(address1)
 tx_dict = greeter.functions.setGreeting('Hello from the contract deployed by Gabriel Jesudian with student number 10573434').buildTransaction({
