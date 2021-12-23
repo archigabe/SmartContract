@@ -95,7 +95,7 @@ print(greeter.functions.greet().call())
 #===============================================================
 
 nonce = W3.eth.getTransactionCount(address1)
-tx_dict = greeter.functions.setGreeting('Nihao').buildTransaction({
+tx_dict = greeter.functions.setGreeting('Hello from the contract deployed by Gabriel Jesudian with student number 10573434').buildTransaction({
   'chainId': 3,
   'gas': 1400000,
   'gasPrice': w3.toWei('40', 'gwei'),
